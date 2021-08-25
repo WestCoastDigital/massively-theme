@@ -1,0 +1,58 @@
+/*
+Theme Name: Massively
+Theme URI: https://github.com/WestCoastDigital/massively-theme
+Author: West Coast Digital
+Author URI: https://westocastdigital.com.au/
+Description: Massively by HTML5 UP html5up.net | @ajlkn Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 5.8
+Requires PHP: 7.0
+License: GNU General Public License v3 or Later
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: wcd
+*/
+
+#blog-pagination .pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#blog-pagination .pagination ul li {
+    margin: 0;
+    padding: 0;
+}
+
+#blog-pagination .pagination li.active a {
+    background-color: #eeeeee;
+}
+
+.nav-links {
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.nav-links .nav-next {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+}
+#wrapper > .bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
