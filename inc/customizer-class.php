@@ -332,11 +332,6 @@ if (!class_exists('WcdThemeCustomizer')) {
                     'default' => '',
                 )
             );
-            // $wp_customize->add_setting('music', array(
-            //     'type' => 'theme_mod',
-            //     'capability' => 'edit_theme_options',
-            //     'sanitize_callback' => 'absint'
-            // ));
             $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'blog_bg',
                 array(
                     'label' => __( 'Background Image', 'wcd' ),

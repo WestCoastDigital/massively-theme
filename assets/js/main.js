@@ -6,6 +6,13 @@
 
 (function($) {
 
+	$("#gallery").unitegallery({
+		gallery_theme: "tiles",
+		tiles_col_width: 788,
+		tiles_min_columns: 1,
+		tiles_max_columns: 1
+	});
+	
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),

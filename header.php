@@ -32,7 +32,12 @@
 					if($desc) {
 					 echo '<p>' . $desc . '</p>';
 					}
-				} ?>
+				} elseif (is_singular('portfolio')) {
+					echo '<h1>' . get_the_title() . '</h1>';
+					if( has_excerpt()) {
+						echo '<p>' . get_the_excerpt() . '</p>';
+					}
+				}?>
 				<ul class="actions">
 					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 				</ul>

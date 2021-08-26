@@ -49,12 +49,17 @@ if (!class_exists('WcdThemeSetup')) {
         public function enqueue()
         {
             wp_enqueue_style('theme-style', get_template_directory_uri() . '/assets/css/main.css' );
-            wp_enqueue_style('custom-style', get_stylesheet_uri());
+            wp_enqueue_style('unitegallery', get_template_directory_uri() . '/assets/gallery/css/unite-gallery.css' );
+            wp_enqueue_style('unitegallery-theme', get_template_directory_uri() . '/assets/gallery/themes/default/ug-theme-default.css' );
+            wp_enqueue_style('custom-style', get_template_directory_uri() . '/custom.min.css' );
+            wp_enqueue_style('main-style', get_stylesheet_uri());
             wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), '3.4.1', true );
 			wp_enqueue_script('scrollex', get_template_directory_uri() . '/assets/js/jquery.scrollex.min.js', array(), '0.2.1', true );
 			wp_enqueue_script('scrolly', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', array(), '1.0.0', true );
 			wp_enqueue_script('browser', get_template_directory_uri() . '/assets/js/browser.min.js', array(), '1.0.0', true );
 			wp_enqueue_script('breakpoints', get_template_directory_uri() . '/assets/js/breakpoints.min.js', array(), '1.0.0', true );
+			wp_enqueue_script('unitegallery', get_template_directory_uri() . '/assets/gallery/js/unitegallery.min.js', array(), '1.0.0', true );
+			wp_enqueue_script('unitegallery-theme', get_template_directory_uri() . '/assets/gallery/themes/tiles/ug-theme-tiles.js', array(), '1.0.0', true );
 			wp_enqueue_script('util', get_template_directory_uri() . '/assets/js/util.js', array(), '1.0.0', true );
 			wp_enqueue_script('theme-script', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.0', true );
         }
@@ -153,6 +158,7 @@ if (!class_exists('WcdThemeSetup')) {
             add_image_size( 'featured-thumb', 1195, 582, true );
             add_image_size( 'post-thumb', 597, 365, true );
             add_image_size( 'single-post', 896, 436, true );
+            add_image_size( 'port-gallery', 788, 344, true );
         }
 
         public function next_post_att() {

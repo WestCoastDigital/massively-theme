@@ -6,6 +6,8 @@ if (!defined('ABSPATH')) {
 $theme_dir = get_template_directory();
 require $theme_dir . '/inc/theme-setup-class.php';
 require $theme_dir . '/inc/customizer-class.php';
+require $theme_dir . '/inc/cpt-class.php';
+require $theme_dir . '/inc/tax-class.php';
 
 function wcd_social_links($true = '')
 {
@@ -119,4 +121,21 @@ function wcd_form()
     if( $form ) {
         return do_shortcode($form);
     }
+}
+
+function wcd_portfolio_taxonomy($tax = 'port_cat' )
+{
+    if ( ! $post = get_post() ) {
+        return '';
+    }
+
+    $taxonomy = $tax;
+    $terms = get_the_terms($post->ID, $taxonomy);
+    $content = '<ul class="terms ' . $tax . '">';
+    foreach ( $terms as $term ) {
+        $term_link = get_term_link( $term );
+        $content .= '<li><a href="' . $term_link . '">' . $term->name . '</a></li>';
+    }
+    $content .= '</ul>';
+    return $content;
 }
